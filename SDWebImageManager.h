@@ -36,4 +36,6 @@ typedef enum
 - (void)downloadWithURL:(NSURL *)url delegate:(id<SDWebImageManagerDelegate>)delegate retryFailed:(BOOL)retryFailed lowPriority:(BOOL)lowPriority __attribute__ ((deprecated)); // use options:SDWebImageRetryFailed|SDWebImageLowPriority instead
 - (void)cancelForDelegate:(id<SDWebImageManagerDelegate>)delegate;
 
+@property (nonatomic, retain) NSURL *baseUrl;
+
 @end

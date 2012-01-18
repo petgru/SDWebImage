@@ -14,6 +14,8 @@ static SDWebImageManager *instance;
 
 @implementation SDWebImageManager
 
+@synthesize baseUrl;
+
 - (id)init
 {
     if ((self = [super init]))
@@ -95,6 +97,9 @@ static SDWebImageManager *instance;
     {
         return;
     }
+
+    if (self.baseUrl && [url.relativeString isEqual:url.absoluteString])
+        url = [NSURL URLWithString:url.relativeString relativeToURL:self.baseUrl];
 
     // Check the on-disk cache async so we don't block the main thread
     [cacheDelegates addObject:delegate];
