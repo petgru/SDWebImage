@@ -10,6 +10,8 @@
 #import "SDWebImageDecoder.h"
 #import <CommonCrypto/CommonDigest.h>
 
+#import "SDWebImageManager.h"
+
 #ifdef ENABLE_SDWEBIMAGE_DECODER
 #import "SDWebImageDecoder.h"
 #endif
@@ -174,10 +176,17 @@ static SDImageCache *instance;
 {
     NSString *key = [arguments objectForKey:@"key"];
     NSMutableDictionary *mutableArguments = [[arguments mutableCopy] autorelease];
-
+    NSDictionary *info = [arguments objectForKey:@"userInfo"];
+    SDWebImageOptions options = [[info valueForKey:@"options"] intValue];
     UIImage *image = [[[UIImage alloc] initWithContentsOfFile:[self cachePathForKey:key]] autorelease];
     if (image)
     {
+        if (options & SDWebImageRetinaImage)
+        {
+            UIImage *retinaImage = [UIImage imageWithCGImage:image.CGImage scale:2 orientation:image.imageOrientation];
+            [image release];
+            image = retinaImage;
+        }
 #ifdef ENABLE_SDWEBIMAGE_DECODER
         UIImage *decodedImage = [UIImage decodedImageWithImage:image];
         if (decodedImage)

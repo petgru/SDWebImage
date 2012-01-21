@@ -7,6 +7,7 @@
  */
 
 #import "SDWebImageDownloader.h"
+#import "SDWebImageManager.h"
 
 #ifdef ENABLE_SDWEBIMAGE_DECODER
 #import "SDWebImageDecoder.h"
@@ -127,6 +128,13 @@ NSString *const SDWebImageDownloadStopNotification = @"SDWebImageDownloadStopNot
     {
         UIImage *image = [[UIImage alloc] initWithData:imageData];
 
+        SDWebImageOptions options = [[self.userInfo objectForKey:@"options"] intValue];
+        if (options & SDWebImageRetinaImage)
+        {
+            UIImage *retinaImage = [UIImage imageWithCGImage:image.CGImage scale:2 orientation:image.imageOrientation];
+            [image release];
+            image = retinaImage;
+        }
 #ifdef ENABLE_SDWEBIMAGE_DECODER
         [[SDWebImageDecoder sharedImageDecoder] decodeImage:image withDelegate:self userInfo:nil];
 #else
