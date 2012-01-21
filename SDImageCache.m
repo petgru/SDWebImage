@@ -184,7 +184,6 @@ static SDImageCache *instance;
         if (options & SDWebImageRetinaImage)
         {
             UIImage *retinaImage = [UIImage imageWithCGImage:image.CGImage scale:2 orientation:image.imageOrientation];
-            [image release];
             image = retinaImage;
         }
 #ifdef ENABLE_SDWEBIMAGE_DECODER
