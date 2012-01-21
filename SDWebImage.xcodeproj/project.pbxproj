@@ -26,6 +26,8 @@
 		53922DA6148C56230056699D /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 53922D94148C56230056699D /* UIButton+WebCache.m */; };
 		53922DA7148C56230056699D /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 53922D95148C56230056699D /* UIImageView+WebCache.h */; };
 		53922DA8148C56230056699D /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 53922D96148C56230056699D /* UIImageView+WebCache.m */; };
+		F9BFFA1C14CAE6FD00B06D46 /* MKAnnotationView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = F9BFFA1A14CAE6FD00B06D46 /* MKAnnotationView+WebCache.h */; };
+		F9BFFA1D14CAE6FD00B06D46 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BFFA1B14CAE6FD00B06D46 /* MKAnnotationView+WebCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		53922D94148C56230056699D /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = SOURCE_ROOT; };
 		53922D95148C56230056699D /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = SOURCE_ROOT; };
 		53922D96148C56230056699D /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = SOURCE_ROOT; };
+		F9BFFA1A14CAE6FD00B06D46 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = SOURCE_ROOT; };
+		F9BFFA1B14CAE6FD00B06D46 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				53922D94148C56230056699D /* UIButton+WebCache.m */,
 				53922D95148C56230056699D /* UIImageView+WebCache.h */,
 				53922D96148C56230056699D /* UIImageView+WebCache.m */,
+				F9BFFA1A14CAE6FD00B06D46 /* MKAnnotationView+WebCache.h */,
+				F9BFFA1B14CAE6FD00B06D46 /* MKAnnotationView+WebCache.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 				53922DA3148C56230056699D /* SDWebImagePrefetcher.h in Headers */,
 				53922DA5148C56230056699D /* UIButton+WebCache.h in Headers */,
 				53922DA7148C56230056699D /* UIImageView+WebCache.h in Headers */,
+				F9BFFA1C14CAE6FD00B06D46 /* MKAnnotationView+WebCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +231,7 @@
 				53922DA4148C56230056699D /* SDWebImagePrefetcher.m in Sources */,
 				53922DA6148C56230056699D /* UIButton+WebCache.m in Sources */,
 				53922DA8148C56230056699D /* UIImageView+WebCache.m in Sources */,
+				F9BFFA1D14CAE6FD00B06D46 /* MKAnnotationView+WebCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
